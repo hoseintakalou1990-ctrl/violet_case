@@ -87,7 +87,7 @@ const Header = () => {
                                 alt="Violet Case"
                                 className="block h-20 w-auto max-w-[2200px] object-contain "
                             />
-                                  <span className="text-gray-800 font-bold text-[30px] mt-5 ms-2 violet-shine">VIOLET CASE</span>
+                                  <span className="text-gray-800 font-semibold text-[30px] mt-5 ms-2 violet-shine">VIOLET CASE</span>
                             
                         </a>
 

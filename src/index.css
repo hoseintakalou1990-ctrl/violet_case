@@ -18,6 +18,7 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+   font-family: "Exo", sans-serif;
   background: linear-gradient(
     110deg,
     #5f0ae8 20%,
