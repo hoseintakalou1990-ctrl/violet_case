@@ -24,8 +24,9 @@ const Header = () => {
 
                 <div className="flex items-center justify-between px-3 py-3 md:px-6 ">
 
-                    <div className="flex flex-col items-center justify-center text-white sm: text-[12px]">
-                        ارسال رایگان برای سفارشات بالای 10 میلیون تومان
+                    <div className="flex flex-col items-center justify-center text-white ">
+                        <span className="text-[12px] sm:text-base">ارسال رایگان برای سفارشات بالای 10 میلیون تومان</span>
+
                         <div className="sm:hidden sm:flex items-center gap-2 justify-center">
                            
 

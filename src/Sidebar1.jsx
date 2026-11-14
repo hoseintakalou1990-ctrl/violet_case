@@ -13,7 +13,7 @@ function SideBar1({isOpen,onClose}){
          `}
     />
     {/* خوده ساید بار */}
-    <aside className={` fixed right-0 top-11 bottom-0 z-50 h-full w-64 bg-white px-5 pt-16 shadow-lg transition-transform duration-300 md:hidden
+    <aside className={` fixed right-0 top-17.5 bottom-0 z-50 h-full w-64 bg-white px-5 pt-16 shadow-lg transition-transform duration-300 md:hidden
     ${isOpen?"translate-x-0":"translate-x-full"}`} 
     >
         <img className="absolute right-4  top-0 w-25" src={logo} alt="" />
