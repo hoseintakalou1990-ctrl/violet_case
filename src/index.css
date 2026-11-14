@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+*{
+      font-family: "Vazirmatn", sans-serif;
+    
+  
+}
+
+
+.Toastify__toast {
+  font-family: 'Vazirmatn', sans-serif !important;
+  direction: rtl;
+}
