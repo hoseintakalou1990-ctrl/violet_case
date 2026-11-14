@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-
+import persianDigits from "./ChangeNumber";
 import { RiInstagramLine, RiTelegramLine } from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
@@ -25,14 +25,14 @@ const Header = () => {
                 <div className="flex items-center justify-between px-3 py-3 md:px-6 ">
 
                     <div className="flex flex-col items-center justify-center text-white ">
-                        <span className="text-[12px] sm:text-base">ارسال رایگان برای سفارشات بالای 10 میلیون تومان</span>
+                        <span className="text-[12px] sm:text-base">ارسال رایگان برای سفارشات بالای {persianDigits(10)} میلیون تومان</span>
 
                         <div className="sm:hidden sm:flex items-center gap-2 justify-center">
                            
 
                             <span className="text-sm lg:text-base flex gap-2 mt-2">
                                  <BiSupport size={20} />
-                                پشتیبانی: 09352838028
+                                پشتیبانی: {persianDigits("09352838028")}
                             </span>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const Header = () => {
                             <BiSupport size={23} />
 
                             <span className="text-sm lg:text-base">
-                                پشتیبانی: 09352838028
+                                پشتیبانی: {persianDigits("09352838028")}
                             </span>
                         </div>
 
