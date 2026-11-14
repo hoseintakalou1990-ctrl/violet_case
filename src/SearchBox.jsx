@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { IoTimeOutline } from "react-icons/io5";
 import { IoArrowUpOutline } from "react-icons/io5";
-
+import bannerSearch from "./assets/bannersearch.jpg";
 const SearchBox = ({ onSearch }) => {
 
     const [search, setSearch] = useState("");
@@ -285,7 +285,7 @@ const SearchBox = ({ onSearch }) => {
                     >
 
                         <img
-                            src="/src/assets/bannersearch.jpg"
+                            src={bannerSearch}
                             alt="پیشنهاد ویژه فروشگاه"
                             className="w-full aspect-[4/1] object-cover object-fit-cover transition-transform duration-300 hover:scale-[1.02]"
                         />
