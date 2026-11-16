@@ -1,8 +1,9 @@
 import React from 'react'
-import { toast } from 'react-toastify'
+
 
 import Header from './Header';
 import Home from './Home';
+import Categories from './Categories';
 
 const App = () => {
 
@@ -11,6 +12,7 @@ const App = () => {
     <div>
       <Header/>
       <Home/>
+      <Categories/>
     </div>
 
 
