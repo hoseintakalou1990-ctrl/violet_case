@@ -89,16 +89,19 @@ const Header = () => {
 
                         <a
                             href="/"
-                            className="flex h-full items-center"
+                            className="flex flex-col  items-center"
                         >
-                            <img
-                                src={violetLogo}
-                                alt="Violet Case"
-                                className="block h-20 w-auto max-w-[2200px] object-contain "
-                            />
-                                  <span className="text-gray-800 font-semibold text-[30px] mt-5 ms-2 violet-shine">VIOLET CASE</span>
+                           
+                            <span className="text-gray-800 font-semibold text-[25px] mt-3 leading-none violet-text  ">VIOLET CASE</span>
+                         
+                                <span className="text-gray-800  text-[10px] leading-none  ">MOBILE ACCESSORIES</span>
                             
                         </a>
+                          <img
+                                src={violetLogo}
+                                alt="Violet Case"
+                                className="block h-20 w-auto max-w-[2200px] object-contain -ms-3 "
+                            />
 
                     </div>
 
