@@ -92,9 +92,9 @@ const Header = () => {
                             className="flex flex-col  items-center"
                         >
                            
-                            <span className="text-gray-800 font-semibold text-[25px] mt-3 leading-none violet-text  ">VIOLET CASE</span>
+                            <span className="text-gray-800 font-semibold text-[25px] mt-3 mb-1 leading-none violet-text  ">VIOLET CASE</span>
                          
-                                <span className="text-gray-800  text-[10px] leading-none  ">MOBILE ACCESSORIES</span>
+                                <span className="text-gray-800  text-[10px] leading-none tracking-[2.5px] me-1.5  ">MOBILE ACCESSORIES</span>
                             
                         </a>
                           <img
