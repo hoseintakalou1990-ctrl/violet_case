@@ -92,7 +92,7 @@ const Header = () => {
                             className="flex flex-col  items-center"
                         >
                            
-                            <span className="text-gray-800 font-semibold text-[25px] mt-3 mb-1 leading-none violet-text  ">VIOLET CASE</span>
+                            <span className="text-gray-800 font-semibold text-[25px] mt-3 mb-1 leading-none violet-text bg-gradient-to-l from-violet-600 via-violet-700 to-black bg-clip-text text-transparent  ">VIOLET CASE</span>
                          
                                 <span className="text-gray-800  text-[10px] leading-none tracking-[2.5px] me-1.5  ">MOBILE ACCESSORIES</span>
                             
