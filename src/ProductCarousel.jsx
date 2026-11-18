@@ -92,7 +92,7 @@ const ProductCarousel = () => {
     const updateItems = () => {
       const width = window.innerWidth;
 
-      if (width < 480) setVisibleItems(2);
+      if (width < 480) setVisibleItems(3);
       else if (width < 640) setVisibleItems(3);
       else if (width < 768) setVisibleItems(4);
       else if (width < 1024) setVisibleItems(5);
