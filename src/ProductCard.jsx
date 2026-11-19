@@ -14,8 +14,8 @@ const ProductCard = ({ product }) => {
       <div className="relative overflow-hidden rounded-xl">
 
         {product.discount > 0 && (
-          <span className="absolute right-3 top-3 z-10 rounded-lg bg-red-500 px-3 py-1 text-xs font-bold text-white">
-            {product.discount}% تخفیف
+          <span className="absolute right-0 top-0 z-10 rounded-lg bg-red-500 px-2 py-1 sm:text-[13px] text-[10px] font-bold text-white">
+            فروش ویژه
           </span>
         )}
 
@@ -71,7 +71,7 @@ const ProductCard = ({ product }) => {
 
         {/* دکمه افزودن به سبد خرید */}
         <button
-          className="mt-1 flex w-full items-center justify-center gap-2 rounded-xl bg-violet-500 py-3 text-sm font-bold text-white transition hover:bg-violet-700 active:scale-95"
+          className="mt-1 flex w-full items-center justify-center gap-2 rounded-xl bg-violet-500 py-2 text-sm font-bold text-white transition hover:bg-violet-700 active:scale-95"
         >
           <FiShoppingCart size={18} />
           افزودن به سبد خرید

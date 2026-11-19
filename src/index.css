@@ -17,8 +17,7 @@
 }
 
 
-.violet-text {
- 
-   font-family: "Exo", sans-serif;
-
+.swiper {
+  --swiper-navigation-color: #8b0cc6;  /* رنگ فلش‌ها */
+  --swiper-navigation-size: 20px;      /* اندازه فلش‌ها */
 }

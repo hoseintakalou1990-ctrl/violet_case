@@ -11,6 +11,7 @@ const Carousel= ()=> {
   return (
     <div className=" max-w-full p-6">
       <Swiper
+      --swiper-navigation-color: #ff5722;
       modules={[Navigation,Pagination,Autoplay]}
         pagination={{ clickable: true }}
          autoplay={{ delay: 2500, disableOnInteraction:false }}
