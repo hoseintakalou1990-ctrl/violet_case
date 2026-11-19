@@ -2,7 +2,7 @@
 import React from "react";
 import { FiShoppingCart, FiHeart, FiEye } from "react-icons/fi";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onAdd }) => {
   const discountPrice = Math.round(
     product.price - (product.price * product.discount) / 100
   );
@@ -71,6 +71,7 @@ const ProductCard = ({ product }) => {
 
         {/* دکمه افزودن به سبد خرید */}
         <button
+        onClick={() => onAdd(product)}
           className="mt-1 flex w-full items-center justify-center gap-2 rounded-xl bg-violet-500 py-2 text-sm font-bold text-white transition hover:bg-violet-700 active:scale-95"
         >
           <FiShoppingCart size={18} />

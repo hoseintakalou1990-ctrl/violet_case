@@ -7,7 +7,7 @@ import ProductCard from "./ProductCard";
 import products from "./products";
 
 
-const Carousel= ()=> {
+const Carousel= ({ onAdd })=> {
   return (
     <div className=" max-w-full p-6">
       <Swiper
@@ -23,7 +23,7 @@ const Carousel= ()=> {
         
    {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <ProductCard product={product} />
+            <ProductCard product={product} onAdd={onAdd} />
           </SwiperSlide>
         ))}
           </Swiper>

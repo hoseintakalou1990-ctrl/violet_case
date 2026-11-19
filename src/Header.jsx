@@ -13,7 +13,7 @@ import Sidebar from "./Sidebar1";
 import SearchBox from "./SearchBox";
 import violetLogo from "./assets/violetlogo.png";
 
-const Header = () => {
+const Header = ({ cartCount }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -139,7 +139,14 @@ const Header = () => {
 
                         <button className="flex flex-col items-center gap-1 cursor-pointer">
 
-                            <SlBasket className="text-xl md:text-2xl text-violet-700" />
+                          <div className="relative">
+    <SlBasket className="text-xl md:text-2xl text-violet-700" />
+    {cartCount > 0 && (
+        <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+            {persianDigits(cartCount)}
+        </span>
+    )}
+</div>
 
                             <span className="hidden sm:block text-xs md:text-sm">
                                 سبد خرید
