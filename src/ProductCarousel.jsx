@@ -11,7 +11,7 @@ const Carousel= ({ onAdd })=> {
   return (
     <div className=" max-w-full p-6">
       <Swiper
-      modules={[Navigation,Pagination,Autoplay]}
+      modules={[Navigation,Autoplay]}
         pagination={{ clickable: true }}
          autoplay={{ delay: 2500, disableOnInteraction:false }}
         navigation
