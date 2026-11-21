@@ -22,7 +22,6 @@ const Categories = () => {
     <section dir="rtl" className="w-full px-3 sm:px-5 py-1 relative sm:static ">
       <div className=" p-2 flex flex-nowrap overflow-x-auto gap-3 sm:gap-6 md:gap-15 sm:justify-center justify-around border border-gray-300 shadow-lg rounded-2xl p-1 -mt-4  sm:mt-0 bg-gray-100 sm:border-0 sm:shadow-none sm:p-2 sm:static sm:bg-white">
         {categories.map((item) => {
-          const Icon = item.icon;
 
           return (
             <a

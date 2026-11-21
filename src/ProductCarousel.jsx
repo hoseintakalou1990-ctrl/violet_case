@@ -16,7 +16,7 @@ const Carousel= ({ onAdd })=> {
          autoplay={{ delay: 2500, disableOnInteraction:false }}
         navigation
          breakpoints={{
-    640: { slidesPerView: 2 },
+    640: { slidesPerView: 3 },
     1024: { slidesPerView: 5 },
   }}   
        spaceBetween={20} slidesPerView={2 }>
