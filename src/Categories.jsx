@@ -3,14 +3,18 @@ import React from "react";
 import glass from "../src/assets/icon/glass.svg"
 import charger from "../src/assets/icon/charger.svg"
 import ghab from "../src/assets/icon/ghab.svg"
+import cable from "../src/assets/icon/cable.svg"
+import hands from "../src/assets/icon/hands.svg"
+import power from "../src/assets/icon/power.svg"
+import holder from "../src/assets/icon/holder.svg"
 const categories = [
   { id: 1, title: "قاب و کاور", icon:ghab , href: "/" },
   { id: 2, title: "گلس گوشی", icon: glass , href: "/" },
   { id: 3, title: "شارژر", icon: charger, href: "/" },
-  { id: 4, title: "کابل و مبدل", icon:3 , href: "/" },
-  { id: 5, title: "هندزفری", icon: 4, href: "/" },
-  { id: 6, title: "پاوربانک", icon: 5, href: "/" },
-  { id: 7, title: "هولدر", icon: 6, href: "/" },
+  { id: 4, title: "کابل و مبدل", icon:cable , href: "/" },
+  { id: 5, title: "هدفون و هندزفری", icon: hands, href: "/" },
+  { id: 6, title: "پاوربانک", icon: power, href: "/" },
+  { id: 7, title: "هولدر", icon: holder, href: "/" },
 ];
 
 const Categories = () => {
