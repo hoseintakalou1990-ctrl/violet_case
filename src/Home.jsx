@@ -1,6 +1,6 @@
 import React from 'react'
 import homebanner from "./assets/homebanner.jpg"
-import homebanner440 from "./assets/home banner440.webp"
+import homebanner440 from "./assets/homebanner_2.jpg"
 
 const Home = () => {
   return (
