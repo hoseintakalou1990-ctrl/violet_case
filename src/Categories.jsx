@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import glass from "../src/assets/icon/glass.svg"
 import charger from "../src/assets/icon/charger.svg"
@@ -24,8 +25,9 @@ const Categories = () => {
         {categories.map((item) => {
 
           return (
-            <a
-              href={item.href}
+            <Link
+             to={`/category/${item.id}`}
+             
               key={item.id}
               className="flex flex-col items-center justify-center gap-2 shrink-0 group"
             >
@@ -40,7 +42,7 @@ const Categories = () => {
               <span className="text-[10px] sm:text-[15px] text-center whitespace-nowrap  text-violet-700-700">
                 {item.title}
               </span>
-            </a>
+            </Link>
           );
         })}
       </div>
