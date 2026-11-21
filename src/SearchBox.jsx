@@ -36,7 +36,12 @@ const SearchBox = ({ onSearch }) => {
         localStorage.setItem("recentSearches", JSON.stringify(recentSearches));
     }, [recentSearches]);
 
-   
+    // فوکوس روی ورودی
+    useEffect(() => {
+        if (isOpen) {
+            searchRef.current?.focus();
+        }
+    }, [isOpen]);
 
     // بستن با کلیک بیرون
     useEffect(() => {
