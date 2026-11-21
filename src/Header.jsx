@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import persianDigits from "./ChangeNumber";
 import { RiInstagramLine, RiTelegramLine } from "react-icons/ri";
@@ -18,27 +17,24 @@ const Header = ({ cartCount }) => {
 
     return (
         <header dir="rtl" className="w-full">
-
             {/* Header Top */}
             <div className="bg-gradient-to-r from-violet-700 via-fuchsia-400 to-violet-700 text-white">
-
                 <div className="flex items-center justify-between px-3 py-3 md:px-6 ">
-
                     <div className="flex flex-col items-center justify-center text-white ">
-                        <span className="text-[12px] sm:text-base">ارسال رایگان برای سفارشات بالای {persianDigits(10)} میلیون تومان</span>
+                        <span className="text-[12px] sm:text-base">
+                            ارسال رایگان برای سفارشات بالای {persianDigits(20)}{" "}
+                            میلیون تومان
+                        </span>
 
                         <div className="sm:hidden sm:flex items-center gap-2 justify-center">
-                           
-
                             <span className="text-sm lg:text-base flex gap-2 mt-2">
-                                 <BiSupport size={20} />
+                                <BiSupport size={20} />
                                 پشتیبانی: {persianDigits("09352838028")}
                             </span>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-3 mr-auto md:mr-0">
-
                         <div className="hidden sm:flex items-center gap-2">
                             <BiSupport size={23} />
 
@@ -48,7 +44,6 @@ const Header = ({ cartCount }) => {
                         </div>
 
                         <div className="flex items-center gap-3 text-xl">
-
                             <a href="#" aria-label="Instagram">
                                 <RiInstagramLine />
                             </a>
@@ -60,24 +55,16 @@ const Header = ({ cartCount }) => {
                             <a href="#" aria-label="Telegram">
                                 <RiTelegramLine />
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
 
             {/* Header Center */}
             <div className="bg-white shadow-sm">
-
                 <div className="flex flex-wrap items-center justify-between gap-3 px-3 py-3 md:px-6 lg:flex-nowrap lg:gap-6">
-
                     {/* Logo + Hamburger */}
                     <div className="order-1 flex h-12 shrink-0 items-center gap-3">
-
                         <button
                             type="button"
                             aria-label="باز کردن منو"
@@ -87,120 +74,109 @@ const Header = ({ cartCount }) => {
                             <RxHamburgerMenu />
                         </button>
 
-                        <a
-                            href="/"
-                            className="flex flex-col  items-center"
-                        >
-                           
-                            <span className="text-gray-800 font-semibold text-[25px] mt-3 mb-1 leading-none violet-text bg-gradient-to-l from-violet-600 via-violet-700 to-black bg-clip-text text-transparent  ">VIOLET CASE</span>
-                         
-                                <span className="text-gray-800  text-[10px] leading-none tracking-[2.5px] me-1.5  ">MOBILE ACCESSORIES</span>
-                            
+                        <a href="/" className="flex flex-col  items-center">
+                            <span className="text-gray-800 font-semibold text-[25px] mt-3 mb-1 leading-none violet-text bg-gradient-to-l from-violet-600 via-violet-700 to-black bg-clip-text text-transparent  ">
+                                VIOLET CASE
+                            </span>
+
+                            <span className="text-gray-800  text-[10px] leading-none tracking-[2.5px] me-1.5  ">
+                                MOBILE ACCESSORIES
+                            </span>
                         </a>
-                          <img
-                                src={violetLogo}
-                                alt="Violet Case"
-                                className="block h-20 w-auto max-w-[2200px] object-contain -ms-3 "
-                            />
-
+                        <img
+                            src={violetLogo}
+                            alt="Violet Case"
+                            className="block h-20 w-auto max-w-[2200px] object-contain -ms-3 "
+                        />
                     </div>
-
 
                     {/* Search */}
                     <div className="order-3 relative w-full lg:order-2 lg:w-[400px] lg:flex-1 lg:max-w-[400px]">
-
                         <SearchBox />
-
                     </div>
-
 
                     {/* User Actions */}
                     <div className="order-2 flex shrink-0 items-center gap-3 md:gap-5">
-
                         <button className="flex flex-col items-center gap-1 cursor-pointer">
-
                             <AiOutlineUser className="text-xl md:text-2xl text-violet-700" />
 
                             <span className="hidden sm:block text-xs md:text-sm">
                                 حساب کاربری
                             </span>
-
                         </button>
 
                         <button className="flex flex-col items-center gap-1 cursor-pointer">
-
                             <MdFavoriteBorder className="text-xl md:text-2xl text-violet-700" />
 
                             <span className="hidden sm:block text-xs md:text-sm">
                                 علاقه‌مندی‌ها
                             </span>
-
                         </button>
 
                         <button className="flex flex-col items-center gap-1 cursor-pointer">
-
-                          <div className="relative">
-    <SlBasket className="text-xl md:text-2xl text-violet-700" />
-    {cartCount > 0 && (
-        <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
-            {persianDigits(cartCount)}
-        </span>
-    )}
-</div>
+                            <div className="relative">
+                                <SlBasket className="text-xl md:text-2xl text-violet-700" />
+                                {cartCount > 0 && (
+                                    <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+                                        {persianDigits(cartCount)}
+                                    </span>
+                                )}
+                            </div>
 
                             <span className="hidden sm:block text-xs md:text-sm">
                                 سبد خرید
                             </span>
-
                         </button>
-
                     </div>
-
                 </div>
-
             </div>
-
 
             {/* Desktop Navigation */}
             <nav className="hidden bg-violet-600 text-white md:block">
-
                 <div className="flex items-center gap-6 overflow-x-auto whitespace-nowrap px-4 py-3 text-sm md:justify-center md:gap-10 md:text-base">
-
                     <a href="/" className="hover:text-yellow-200 transition">
                         صفحه اصلی
                     </a>
 
-                    <a href="/products" className="hover:text-yellow-200 transition">
+                    <a
+                        href="/products"
+                        className="hover:text-yellow-200 transition"
+                    >
                         فروشگاه
                     </a>
 
-                    <a href="/categories" className="hover:text-yellow-200 transition">
+                    <a
+                        href="/categories"
+                        className="hover:text-yellow-200 transition"
+                    >
                         دسته‌بندی محصولات
                     </a>
 
-                    <a href="/offers" className="hover:text-yellow-200 transition">
+                    <a
+                        href="/offers"
+                        className="hover:text-yellow-200 transition"
+                    >
                         تخفیف‌ها
                     </a>
 
-                    <a href="/about" className="hover:text-yellow-200 transition">
+                    <a
+                        href="/about"
+                        className="hover:text-yellow-200 transition"
+                    >
                         درباره ما
                     </a>
 
-                    <a href="/contact" className="hover:text-yellow-200 transition">
+                    <a
+                        href="/contact"
+                        className="hover:text-yellow-200 transition"
+                    >
                         تماس با ما
                     </a>
-
                 </div>
-
             </nav>
 
-
             {/* Mobile Sidebar */}
-            <Sidebar
-                isOpen={isOpen}
-                onClose={() => setIsOpen(false)}
-            />
-
+            <Sidebar isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </header>
     );
 };

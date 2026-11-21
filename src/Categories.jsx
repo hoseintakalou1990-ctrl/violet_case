@@ -1,22 +1,16 @@
 import React from "react";
-import {
-  FiSmartphone,
-  FiShield,
-  FiZap,
-  FiLink,
-  FiHeadphones,
-  FiBattery,
-  FiMapPin,
-} from "react-icons/fi";
 
+import glass from "../src/assets/icon/glass.svg"
+import charger from "../src/assets/icon/charger.svg"
+import ghab from "../src/assets/icon/ghab.svg"
 const categories = [
-  { id: 1, title: "قاب و کاور", icon: FiSmartphone, href: "/" },
-  { id: 2, title: "گلس گوشی", icon: FiShield, href: "/" },
-  { id: 3, title: "شارژر", icon: FiZap, href: "/" },
-  { id: 4, title: "کابل و مبدل", icon: FiLink, href: "/" },
-  { id: 5, title: "هندزفری", icon: FiHeadphones, href: "/" },
-  { id: 6, title: "پاوربانک", icon: FiBattery, href: "/" },
-  { id: 7, title: "هولدر", icon: FiMapPin, href: "/" },
+  { id: 1, title: "قاب و کاور", icon:ghab , href: "/" },
+  { id: 2, title: "گلس گوشی", icon: glass , href: "/" },
+  { id: 3, title: "شارژر", icon: charger, href: "/" },
+  { id: 4, title: "کابل و مبدل", icon:3 , href: "/" },
+  { id: 5, title: "هندزفری", icon: 4, href: "/" },
+  { id: 6, title: "پاوربانک", icon: 5, href: "/" },
+  { id: 7, title: "هولدر", icon: 6, href: "/" },
 ];
 
 const Categories = () => {
@@ -33,10 +27,14 @@ const Categories = () => {
               className="flex flex-col items-center justify-center gap-2 shrink-0 group"
             >
               <div className=" w-13 h-12 md:w-20 md:h-20 rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors flex items-center justify-center">
-                <Icon className="text-purple-700 text-2xl md:text-4xl" />
+                 <img
+                src={item.icon}
+                alt={item.title}
+                className="w-10 h-10 md:w-15 md:h-15 object-contain"
+              />
               </div>
 
-              <span className="text-[10px] sm:text-[15px] text-center whitespace-nowrap  text-gray-700">
+              <span className="text-[10px] sm:text-[15px] text-center whitespace-nowrap  text-violet-700-700">
                 {item.title}
               </span>
             </a>

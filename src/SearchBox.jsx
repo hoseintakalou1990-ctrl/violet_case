@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 
 import { IoIosSearch } from "react-icons/io";
@@ -7,16 +6,13 @@ import { IoTimeOutline } from "react-icons/io5";
 import { IoArrowUpOutline } from "react-icons/io5";
 import bannerSearch from "./assets/bannersearch.jpg";
 const SearchBox = ({ onSearch }) => {
-
     const [search, setSearch] = useState("");
 
     const [isOpen, setIsOpen] = useState(false);
 
     const [recentSearches, setRecentSearches] = useState(() => {
         try {
-            return JSON.parse(
-                localStorage.getItem("recentSearches")
-            ) || [];
+            return JSON.parse(localStorage.getItem("recentSearches")) || [];
         } catch {
             return [];
         }
@@ -32,61 +28,43 @@ const SearchBox = ({ onSearch }) => {
         "شارژر سامسونگ",
         "کابل شارژ",
         "پاوربانک",
-        "هندزفری"
+        "هندزفری",
     ];
 
     // ذخیره جستجوها
     useEffect(() => {
-        localStorage.setItem(
-            "recentSearches",
-            JSON.stringify(recentSearches)
-        );
+        localStorage.setItem("recentSearches", JSON.stringify(recentSearches));
     }, [recentSearches]);
 
-    // فوکوس روی ورودی
-    useEffect(() => {
-        if (isOpen) {
-            searchRef.current?.focus();
-        }
-    }, [isOpen]);
+   
 
     // بستن با کلیک بیرون
     useEffect(() => {
-
         const handleOutsideClick = (event) => {
-            if (
-                boxRef.current &&
-                !boxRef.current.contains(event.target)
-            ) {
+            if (boxRef.current && !boxRef.current.contains(event.target)) {
                 setIsOpen(false);
             }
         };
 
-        document.addEventListener(
-            "mousedown",
-            handleOutsideClick
-        );
+        document.addEventListener("mousedown", handleOutsideClick);
 
         return () => {
-            document.removeEventListener(
-                "mousedown",
-                handleOutsideClick
-            );
+            document.removeEventListener("mousedown", handleOutsideClick);
         };
-
     }, []);
 
     // انجام جستجو
     const handleSearch = (value) => {
-
         const searchValue = value.trim();
 
         if (!searchValue) return;
 
-        setRecentSearches(prev => [
-            searchValue,
-            ...prev.filter(item => item !== searchValue)
-        ].slice(0, 8));
+        setRecentSearches((prev) =>
+            [searchValue, ...prev.filter((item) => item !== searchValue)].slice(
+                0,
+                8,
+            ),
+        );
 
         setSearch(searchValue);
 
@@ -97,9 +75,7 @@ const SearchBox = ({ onSearch }) => {
 
     // حذف یک جستجو
     const removeSearch = (value) => {
-        setRecentSearches(prev =>
-            prev.filter(item => item !== value)
-        );
+        setRecentSearches((prev) => prev.filter((item) => item !== value));
     };
 
     // حذف تمام جستجوها
@@ -108,13 +84,7 @@ const SearchBox = ({ onSearch }) => {
     };
 
     return (
-
-        <div
-            ref={boxRef}
-            dir="rtl"
-            className="relative w-full"
-        >
-
+        <div ref={boxRef} dir="rtl" className="relative w-full">
             {/* Search Input */}
 
             <form
@@ -124,12 +94,12 @@ const SearchBox = ({ onSearch }) => {
                 }}
                 className={`relative z-20 flex items-center bg-white
                 border border-gray-300 transition-all duration-300
-                ${isOpen
-                    ? "rounded-t-xl border-violet-500 shadow-sm"
-                    : "rounded-xl"
+                ${
+                    isOpen
+                        ? "rounded-t-xl border-violet-500 shadow-sm"
+                        : "rounded-xl"
                 }`}
             >
-
                 <IoIosSearch
                     size={24}
                     className="absolute right-3 text-gray-500"
@@ -154,9 +124,7 @@ const SearchBox = ({ onSearch }) => {
                         <IoClose size={20} />
                     </button>
                 )}
-
             </form>
-
 
             {/* Expandable Search Content */}
 
@@ -166,27 +134,23 @@ const SearchBox = ({ onSearch }) => {
                 border-gray-200 bg-white shadow-xl
                 transition-all duration-500
                 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${isOpen
-                    ? "max-h-[650px] opacity-100 translate-y-0 visible"
-                    : "max-h-0 opacity-0 -translate-y-2 invisible"
+                ${
+                    isOpen
+                        ? "max-h-[650px] opacity-100 translate-y-0 visible"
+                        : "max-h-0 opacity-0 -translate-y-2 invisible"
                 }`}
             >
-
                 <div className="p-4 md:p-5">
-
                     {/* Recent Searches */}
 
                     <div className="mb-6">
-
                         <div className="mb-4 flex items-center justify-between">
-
                             <h3 className="flex items-center gap-2 text-sm font-bold text-gray-800">
                                 <IoTimeOutline size={19} />
                                 جستجوهای اخیر
                             </h3>
 
                             {recentSearches.length > 0 && (
-
                                 <button
                                     type="button"
                                     onClick={clearSearches}
@@ -194,22 +158,16 @@ const SearchBox = ({ onSearch }) => {
                                 >
                                     پاک کردن همه
                                 </button>
-
                             )}
-
                         </div>
 
                         <div className="flex flex-wrap gap-2">
-
                             {recentSearches.length > 0 ? (
-
                                 recentSearches.map((item, index) => (
-
                                     <div
                                         key={`${item}-${index}`}
                                         className="flex items-center gap-2 rounded-full border border-gray-200 px-3 py-2 text-xs text-gray-600 transition hover:border-violet-400 hover:text-violet-700"
                                     >
-
                                         <button
                                             type="button"
                                             onClick={() => handleSearch(item)}
@@ -225,57 +183,38 @@ const SearchBox = ({ onSearch }) => {
                                         >
                                             <IoClose size={16} />
                                         </button>
-
                                     </div>
-
                                 ))
-
                             ) : (
-
                                 <p className="text-xs text-gray-400">
                                     هنوز جستجویی انجام نداده‌اید.
                                 </p>
-
                             )}
-
                         </div>
-
                     </div>
-
 
                     {/* Special Suggestions */}
 
                     <div className="mb-5">
-
                         <h3 className="mb-4 text-sm font-bold text-gray-800">
                             پیشنهادهای ویژه
                         </h3>
 
                         <div className="flex flex-wrap gap-2">
-
                             {suggestions.map((item, index) => (
-
                                 <button
                                     key={index}
                                     type="button"
                                     onClick={() => handleSearch(item)}
                                     className="flex items-center gap-2 rounded-full border border-gray-200 px-3 py-2 text-xs text-gray-600 transition hover:border-violet-500 hover:bg-violet-50 hover:text-violet-700"
                                 >
-
                                     {item}
 
-                                    <IoArrowUpOutline
-                                        className="rotate-45"
-                                    />
-
+                                    <IoArrowUpOutline className="rotate-45" />
                                 </button>
-
                             ))}
-
                         </div>
-
                     </div>
-
 
                     {/* Advertisement Banner */}
 
@@ -283,21 +222,15 @@ const SearchBox = ({ onSearch }) => {
                         href="/offers"
                         className="block overflow-hidden rounded-lg"
                     >
-
                         <img
                             src={bannerSearch}
                             alt="پیشنهاد ویژه فروشگاه"
                             className="w-full aspect-[4/1] object-cover object-fit-cover transition-transform duration-300 hover:scale-[1.02]"
                         />
-
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
     );
 };
 
