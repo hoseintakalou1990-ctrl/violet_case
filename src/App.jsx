@@ -38,7 +38,7 @@ const App = () => {
           {/* مسیر دسته‌بندی‌ها و صفحات دیگر را بعداً اضافه می‌کنیم */}
           <Route
     path="category/:categoryId"
-    element={<Category />}
+    element={<Category onAdd={addToCart} />}
   />
 
         </Route>

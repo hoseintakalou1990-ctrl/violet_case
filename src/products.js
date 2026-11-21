@@ -1,5 +1,9 @@
 
 import ghab from"../src/assets/product/ghab.jpg"
+import ghab2 from"../src/assets/product/ghab2.jpg"
+import ghab3 from"../src/assets/product/ghab3.jpg"
+import ghab4 from"../src/assets/product/ghab4.jpg"
+import ghab5 from"../src/assets/product/ghab5.jpg"
 import headphone from"../src/assets/product/headphone.webp"
 import sharjer from"../src/assets/product/sharjer.jpg"
 import power from"../src/assets/product/power.jpg"
@@ -50,3 +54,48 @@ const products = [
 ];
 
 export default products;
+
+
+
+export const cases = [
+  {
+    id: 1,
+    title: "قاب سیلیکونی آیفون ۱۵",
+    categoryId: 1,
+    price: 450000,
+    image: ghab,
+    bestseller: true,
+  },
+  {
+    id: 2,
+    title: "قاب شفاف سامسونگ S24",
+    categoryId: 1,
+    price: 320000,
+    image: ghab2,
+    bestseller: false,
+  },
+  {
+    id: 3,
+    title: "قاب مگ‌سیف آیفون ۱۵ پرو",
+    categoryId: 1,
+    price: 580000,
+    image:ghab3,
+    bestseller: true,
+  },
+  {
+    id: 4,
+    title: "قاب ضدضربه شیائومی",
+    categoryId: 1,
+    price: 390000,
+    image:ghab4,
+    bestseller: false,
+  },
+  {
+    id: 5,
+    title: "قاب فانتزی دخترانه",
+    categoryId: 1,
+    price: 280000,
+    image: ghab5,
+    bestseller: false,
+  },
+];
