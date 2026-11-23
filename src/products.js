@@ -61,7 +61,7 @@ export const cases = [
   {
     id: 1,
     title: "قاب سیلیکونی آیفون ۱۵",
-    categoryId: 1,
+    catId: 1,
     price: 450000,
     image: ghab,
     bestseller: true,
@@ -69,7 +69,7 @@ export const cases = [
   {
     id: 2,
     title: "قاب شفاف سامسونگ S24",
-    categoryId: 1,
+    catId: 1,
     price: 320000,
     image: ghab2,
     bestseller: false,
@@ -77,7 +77,7 @@ export const cases = [
   {
     id: 3,
     title: "قاب مگ‌سیف آیفون ۱۵ پرو",
-    categoryId: 1,
+    catId: 1,
     price: 580000,
     image:ghab3,
     bestseller: true,
@@ -85,7 +85,7 @@ export const cases = [
   {
     id: 4,
     title: "قاب ضدضربه شیائومی",
-    categoryId: 1,
+    catId: 1,
     price: 390000,
     image:ghab4,
     bestseller: false,
@@ -93,9 +93,10 @@ export const cases = [
   {
     id: 5,
     title: "قاب فانتزی دخترانه",
-    categoryId: 1,
+    catId: 1,
     price: 280000,
     image: ghab5,
     bestseller: false,
   },
 ];
+

@@ -11,6 +11,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Sidebar from "./Sidebar1";
 import SearchBox from "./SearchBox";
 import violetLogo from "./assets/violetlogo.png";
+import { NavLink } from "react-router-dom";
 
 const Header = ({ cartCount }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -113,37 +114,39 @@ const Header = ({ cartCount }) => {
                             </span>
                         </button>
 
-                        <button className="flex flex-col items-center gap-1 cursor-pointer">
-                            <div className="relative">
-                                <SlBasket className="text-xl md:text-2xl text-violet-700" />
-                                {cartCount > 0 && (
-                                    <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
-                                        {persianDigits(cartCount)}
-                                    </span>
-                                )}
-                            </div>
+                        <NavLink to="/cart" className="flex flex-col items-center gap-1 cursor-pointer">
+    <div className="relative">
+        <SlBasket className="text-xl md:text-2xl text-violet-700" />
 
-                            <span className="hidden sm:block text-xs md:text-sm">
-                                سبد خرید
-                            </span>
-                        </button>
+        {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+                {persianDigits(cartCount)}
+            </span>
+        )}
+    </div>
+
+    <span className="hidden sm:block text-xs md:text-sm">
+        سبد خرید
+    </span>
+</NavLink>
                     </div>
                 </div>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden bg-violet-600 text-white md:block">
+            <nav className="hidden bg-violet-500 text-white md:block">
                 <div className="flex items-center gap-6 overflow-x-auto whitespace-nowrap px-4 py-3 text-sm md:justify-center md:gap-10 md:text-base">
-                    <a href="/" className="hover:text-yellow-200 transition">
-                        صفحه اصلی
-                    </a>
-
-                    <a
-                        href="/products"
-                        className="hover:text-yellow-200 transition"
+                    <NavLink
+                        to="/"
+                        end
+                        className={({ isActive }) =>
+                            `menu-link ${isActive ? "active" : ""}`
+                        }
                     >
-                        فروشگاه
-                    </a>
+                        صفحه اصلی
+                    </NavLink>
+
+                    <NavLink to="/">فروشگاه</NavLink>
 
                     <a
                         href="/categories"

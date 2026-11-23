@@ -1,23 +1,32 @@
 
 import React from "react";
+const categoryTitles = {
+  1: "قاب و کاور",
+  2: "گلس گوشی",
+  3: "شارژر",
+  4: "کابل و مبدل",
+  5: "هدفون و هندزفری",
+  6: "پاوربانک",
+  7: "هولدر",
+};
 import { useParams } from "react-router-dom";
 import { cases } from "./products";
 
 const Category = ({ onAdd }) => {
-  const { categoryId } = useParams();
+  const {categoryId} = useParams();
 
   const selectedProducts = cases.filter(
-    (product) => product.categoryId === Number(categoryId)
+    (product) => product.catId === Number(categoryId)
   );
 
   return (
     <div dir="rtl" className="p-5">
 
       <h1 className="text-2xl font-bold text-violet-700 mb-5">
-        محصولات قاب و کاور
+        محصولات {categoryTitles[categoryId]}
       </h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
 
         {selectedProducts.map((product) => (
           <div
@@ -28,7 +37,7 @@ const Category = ({ onAdd }) => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-28 object-contain"
+              className="w-full h-38 object-contain"
             />
 
             <h2 className="mt-2 text-sm font-bold">

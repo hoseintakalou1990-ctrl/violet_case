@@ -31,11 +31,11 @@ const Categories = () => {
               key={item.id}
               className="flex flex-col items-center justify-center gap-2 shrink-0 group"
             >
-              <div className=" w-13 h-12 md:w-20 md:h-20 rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors flex items-center justify-center">
+              <div className=" w-13 h-12 md:w-15 md:h-15 rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors flex items-center justify-center">
                  <img
                 src={item.icon}
                 alt={item.title}
-                className="w-10 h-10 md:w-15 md:h-15 object-contain"
+                className="w-10 h-10 md:w-12 md:h-12 object-contain"
               />
               </div>
 
