@@ -34,7 +34,6 @@ function addToCart(product) {
 }
 
     return (
-        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout cartCount={cart.length} />}>
                     <Route index element={<Home onAdd={addToCart} />} />
@@ -45,8 +44,6 @@ function addToCart(product) {
                 </Route>
                    <Route path="cart" element={<Cart cart={cart} />} />
             </Routes>
-
-        </BrowserRouter>
     );
 };
 
