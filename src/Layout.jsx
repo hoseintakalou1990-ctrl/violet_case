@@ -6,7 +6,6 @@ const Layout = ({ cartCount }) => {
   return (
     <div>
       <Header cartCount={cartCount} />
-
       <main>
         <Outlet />
       </main>

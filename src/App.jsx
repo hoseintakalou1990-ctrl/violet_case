@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Category from "./Category";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Cart from "./Cart";
 import Layout from "./Layout";
 import Home from "./Home";
@@ -22,7 +22,6 @@ function addToCart(product) {
                     : item
             );
         }
-
         return [
             ...prevCart,
             {
@@ -35,7 +34,7 @@ function addToCart(product) {
 
     return (
             <Routes>
-                <Route path="/" element={<Layout cartCount={cart.length} />}>
+                <Route path="/" element={<Layout cartCount={cart.length}/>}>
                     <Route index element={<Home onAdd={addToCart} />} />
                     <Route
                         path="category/:categoryId"

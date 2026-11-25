@@ -2,6 +2,7 @@
 import React from "react";
 import { FiShoppingBag, FiArrowLeft, FiShield } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import violetLogo from "./assets/violetlogo.png";
 
 const Cart = ({ cart }) => {
   const faNumber = (number) =>
@@ -29,24 +30,41 @@ const Cart = ({ cart }) => {
     <div dir="rtl" className="min-h-screen bg-[#faf9fd] px-3 py-6 sm:px-6 sm:py-10">
       <div className="mx-auto max-w-6xl">
 
-        {/* Header */}
-        <div className="mb-6 sm:mb-8">
-          <div className="mb-2 flex items-center gap-2 text-violet-600">
-            <FiShoppingBag size={19} />
-            
-            <span className="text-xs font-semibold sm:text-sm">
-              فروشگاه ویولت کیس
-            </span>
-          </div>
+  {/* Header */}
+<div className="mb-6 sm:mb-8">
 
-          <h1 className="text-xl font-extrabold text-gray-800 sm:text-3xl">
-            سبد خرید
-          </h1>
+  <div className="mb-5 flex items-end gap-2 text-violet-600">
 
-          <p className="mt-1 text-xs text-gray-400 sm:text-sm">
-            محصولات انتخاب‌شده خود را بررسی کنید.
-          </p>
-        </div>
+    <FiShoppingBag size={20} className="shrink-0" />
+
+    <div className="flex flex-col items-center justify-center">
+       <img
+      className="h-[45px] w-[45px] shrink-0 object-contain"
+      src={violetLogo}
+      alt="Violet Case"
+    />
+      <span className="text-xs font-semibold sm:text-sm">
+        Violet Case
+      </span>
+
+      <span className="text-[10px] leading-none text-gray-800">
+        MOBILE ACCESSORIES
+      </span>
+    </div>
+
+   
+
+  </div>
+
+  <h1 className="text-xl font-extrabold text-gray-800 sm:text-3xl">
+    سبد خرید
+  </h1>
+
+  <p className="mt-1 text-xs text-gray-400 sm:text-sm">
+    محصولات انتخاب‌شده خود را بررسی کنید.
+  </p>
+
+</div>
 
         {cart.length === 0 ? (
           <div className="rounded-2xl border border-violet-100 bg-white px-4 py-14 text-center shadow-sm">
